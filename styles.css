@@ -2,13 +2,17 @@
    Styles généraux de la page
    =============================== */
 
-body{
+.body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #fdf5e6;
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 
 /* ===============================
    Style du titre principal
@@ -863,6 +867,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
