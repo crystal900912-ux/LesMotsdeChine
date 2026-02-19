@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ma page personnelle</title>
+</head>
+
+<body>  
+    <!-- Barre de navigation -->
+     <nav class="menu">
+        <ul class="menu-list">
+            <li class="menu-item"><a href="Index.html">Accueil</a></li>
+            <li class="menu-item"><a href="Inscription.html">Modalités d'inscription</a></li>
+            <li class="menu-item"><a href="Equipe.html">Equipe pédagogique</a></li>
+            <li class="menu-item"><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!--Bloc de la procédure d'inscription  -->
+    <section class="ink-section2">
+    <!-- Décorations latérales -->
+    <div class="ink-left2"></div>
+    <div class="ink-right2"></div>
+
+    <!-- Partie centrale du rouleau de peinture -->
+    <div class="ink-scroll2">
+      <h2 class="ink-title2">Procédure d'inscription</h2>
+       
+      <div class="ink-list2">
+
+        <div class="ink-item2">
+          <h3>1. Vous remplissez le formulaire ci-dessous 👇.</h3>
+          <button id="openFormBtn" class="form-btn">
+              Formulaire d'inscription
+          </button>
+
+        </div>
+
+        <div class="ink-item2">
+          <h3>2. Nous vous contactons par téléphone ou par e-mail.</h3>
+        </div>
+
+        <div class="ink-item2">
+          <h3>3. Vous réservez un cours d'essai.</h3>
+        </div>
+
+        <div class="ink-item2">
+          <h3>4. Vous vous inscrivez à une formation.</h3>
+        </div>
+
+        <div class="ink-item2">
+          <h3>5. Nous vous indiquons les modalités de paiement.</h3>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Fenêtre popup pour le formulaire d'inscription -->
+<div id="formModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close-btn">&times;</span>
+
+    <h2>Formulaire d'inscription</h2>
+
+    <p>
+      Grâce à vos indications, nous ferons de notre mieux pour vous aiguiller vers la formule la plus adaptée
+      selon votre niveau, vos attentes ainsi que vos objectifs.
+    </p>
+
+    <form>
+
+      <label>Adresse e-mail</label>
+      <input type="email" placeholder="Votre adresse e-mail" required>
+
+      <label>Votre prénom</label>
+      <input type="text" placeholder="Votre prénom">
+
+      <label>Votre nom</label>
+      <input type="text" placeholder="Votre nom">
+
+      <label>Dans quelle zone géographique habitez-vous ?</label>
+      <input type="text">
+
+      <label>Quel est votre niveau en chinois (approximativement) ?</label>
+      <input type="text">
+
+      <label>Quel est votre objectif dans l'apprentissage du chinois et quelles sont les difficultés principales que vous rencontrez en ce moment ?
+        Cela nous aidera à préparer notre appel pour mieux vous renseigner.
+      </label>
+      <textarea></textarea>
+
+      <label>Quel type de cours vous intéresse ?</label>
+      <select>
+        <option>Cours individuels</option>
+        <option>Cours en petit groupe (4-6 personnes)</option>
+        <option>Cours en mini groupe (2-3 personnes)</option>
+        <option>Séjour linguistique en Chine</option>
+        <option>Je ne sais pas, j'ai besoin de conseils.</option>
+      </select>
+
+      <label>Voulez-vous que nous vous appelions ?</label>
+      <select>
+        <option>Oui</option>
+        <option>Non, je préfère être contacté(e) par email.</option>
+        <option>Non, je préfère être contacté(e) par WeChat.</option>
+      </select>
+
+      <label>Numéro de téléphone ou ID WeChat</label>
+      <input type="text">
+
+      <label>Comment avez-vous découvert notre école ?</label>
+      <textarea></textarea>
+
+      <button type="submit" class="send-btn">Envoyer</button>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- Script pour gérer la fenêtre popup -->
+<script>
+/* Récupération des éléments du DOM */
+const modal = document.getElementById("formModal");  /* La fenêtre popup */
+const btn = document.getElementById("openFormBtn");  /* Le bouton pour ouvrir la fenêtre */
+const close = document.querySelector(".close-btn");  /* Le bouton pour fermer la fenêtre */
+
+/* Ouvrir la fenêtre popup au clic sur le bouton */
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+/* Fermer la fenêtre popup au clic sur le bouton de fermeture */
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+/* Fermer la fenêtre popup si l'utilisateur clique en dehors */
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+</body>
+</html>
+

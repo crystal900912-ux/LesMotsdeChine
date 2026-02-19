@@ -1,0 +1,863 @@
+/* ===============================
+   Styles généraux de la page
+   =============================== */
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    margin: 2em;
+    background-color: #fdf5e6;
+}
+
+/* ===============================
+   Style du titre principal
+   =============================== */
+h1{
+    color: #8b4513;
+    text-align: center;
+}
+
+/* ===============================
+   Styles du menu de navigation
+   =============================== */
+
+/* Liens du menu */
+.menu a{
+    text-decoration: none; /* Supprimer le soulignement */
+    color: black;        /* Couleur du texte */
+}
+
+/* Effet au survol des liens */
+.menu a:hover {
+    color:#8b4513;
+}
+
+/* Liste du menu */
+.menu-list{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* Éléments du menu */
+.menu-item{
+    display: inline-block;      
+    width: 20%;                  
+    text-align: center;          
+    border: 1px solid #8b4513; 
+    border-radius: 15px;             
+    padding: 10px;               
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+}
+
+/* Effet au survol des boutons du menu */
+.menu-item:hover{
+    background-color: #ffdab6;
+}
+
+/* Style de l'image du logo */
+#logo {
+    width: 40%;
+    height:auto;
+}
+
+/* Style de l'image du slogan */
+#slogan {
+    width: 35%;
+    height: auto;
+}
+
+/* ============================================
+   Cadre décoratif pour la phrase de présentation
+   ============================================ */
+
+/* Conteneur principal du cadre */
+.frame-box {
+    position: relative;
+    width: 1000px;
+    height: 150px;
+    margin: 40px;
+}
+
+/* Images décoratives du cadre */
+.frame-box img {
+    position:absolute;
+    width: 100px;
+}
+
+/* Coin supérieur gauche */
+.top-left {
+    top:0;
+    left:0;
+}
+
+/* Coin inférieur gauche avec animation flottante vers le bas */
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    animation: floatdown 6s ease-in-out infinite;
+}
+
+@keyframes floatdown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(+20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Coin supérieur droit avec animation flottante vers le haut */
+.top-right {
+    top:0;
+    right:0;
+    animation: floatup 6s ease-in-out infinite;
+}
+
+@keyframes floatup {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Coin inférieur droit */
+.bottom-right {
+    bottom:0;
+    right:0;
+}
+
+/* Zone du texte central */
+.center-text {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+}
+
+/* Style du texte de présentation */
+.center-text p {
+    font-size:26px;
+}
+
+/* =====================================================
+   Section des caractéristiques principales du centre :
+   - Organisation des cartes en lignes horizontales
+   - Icônes illustratives avec texte descriptif
+   ===================================================== */
+
+/* Conteneur des lignes de caractéristiques */
+   .items-wrapper {
+  display: flex;
+  justify-content: center;  
+  gap: 80px;                 
+}
+
+/* Carte contenant une icône et un texte */
+.item-with-icon {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  text-align:center;   
+}
+
+/* Icône illustrative */
+.intro-icon {
+    width: 400px;
+    height:auto;
+}
+
+/* Texte de description sous l’icône */
+.item-with-icon h2 {
+  margin: 0;  
+  font-size: 24px;  
+  font-weight: normal;
+  margin-top: -40px;
+}
+
+/* =====================================================
+   Section "Public cible"
+   - Bandeau décoratif avec illustrations animées
+   - Texte d’introduction centré
+   - Grille de cartes interactives présentant les profils
+   ===================================================== */
+
+/* ===== Bandeau décoratif du public cible ===== */ 
+.hero-deco {
+  position: relative;
+  width: 100%;
+  padding: 70px 20px 50px;
+  overflow: hidden;
+}
+
+/* Illustration : montagne en arrière-plan */
+#faintermountain {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  filter: grayscale(100%);
+}
+
+/* Oiseaux décoratifs */
+#birds1 {
+  position: absolute;
+  left: 180px;  
+  bottom: 150px; 
+  width: 90px;
+}
+
+#birds2 {
+  position: absolute;
+  right: 300px;
+  top: 100px;
+  width: 80px;
+  opacity: 0.7;
+}
+
+/* Animation de flottement des éléments décoratifs */
+#birds1, #birds2 {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Texte d’introduction centré */
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;  
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.hero-text p {
+    font-size: 19px;
+     color: #666;
+}
+
+/* Empêche les images décoratives d’interférer avec la souris */
+.hero-deco img {
+  pointer-events: none;  
+  user-select: none;
+}
+
+
+
+/* ===== Grille des cartes du public cible ===== */
+
+.target-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+
+/* Carte représentant un profil d’apprenant */
+.target-card {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+}
+
+
+/* Titre du profil */
+.target-card h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+
+/* Description (masquée par défaut) */
+.target-card p {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s ease;
+}
+
+
+/* Effets interactifs au survol */
+.target-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.target-card:hover h3 {
+  color: #b22222;   /* 可以换成你的品牌色 */
+}
+
+.target-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Illustration décorative du pavillon */
+#pavilioncard {
+    width: 400px;
+    height: auto;
+    margin-top: 150px;
+}
+
+
+/* =====================================================
+   Section "Sujets abordés"
+   - Mise en page en forme de rouleau central
+   - Décorations latérales style encre chinoise animée
+   - Liste verticale des thèmes avec effet interactif
+   ===================================================== */
+
+/* ===== Conteneur principal de la section ===== */
+.ink-section {
+  position: relative;
+  display: flex;
+  justify-content: center; /* 卷轴居中 */
+  align-items: flex-start; 
+  padding: 100px 0;
+  text-align: center;
+  overflow: visible;
+}
+
+/* Rouleau central contenant les contenus */
+.ink-scroll {
+  position: relative;
+  width: 700px; 
+  text-align: center;
+  z-index: 2;
+}
+
+/* Décoration latérale gauche style encre */
+.ink-left {
+  position: absolute;
+  left: -100px;       
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: url("ink-painting2.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.35;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Décoration latérale droite */
+.ink-right {
+  position: absolute;
+  right: -100px;      
+  top: 0;
+  width: 500px;
+  height: 100%;
+  background: url("ink-painting1.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Animation flottante des décorations */
+.ink-left, .ink-right {
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Titre principal */
+.ink-title {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #120404;
+}
+
+/* Sous-titre descriptif */
+.ink-subtitle {
+  color: #5e5c5c;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+/* Élément de liste des thèmes */
+.ink-item {
+  position: relative;
+  padding: 30px 0;
+}
+
+/* Trait décoratif en encre au-dessus de chaque item */
+.ink-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 400px;
+  height: 20px;
+
+  background: url("ink-stroke.png") no-repeat center;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+/* Titre des sujets */
+.ink-item h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.ink-item p {
+  color: #666;
+  font-size: 20px;
+}
+
+/* Effet interactif au survol */
+.ink-item:hover {
+  transform: translateY(-7px);
+  transition: 0.3s ease;
+}
+
+/* Ligne décorative d’arrière-plan */
+.ink-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1500px;
+  height: 300px;
+
+  background: url("ink-line.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+
+
+/* =====================================================
+   SECTION : Procédure d'inscription (Rouleau décoratif)
+   HTML : section.ink-section2
+===================================================== */
+
+/* ===== Zone principale du rouleau ===== */
+.ink-section2 {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  padding: 100px 0;
+  text-align: center;
+  overflow: visible;
+}
+
+/* ===== Corps du rouleau ===== */
+.ink-scroll2 {
+  position: relative;
+  width: 700px; 
+  text-align: center;
+  z-index: 2;
+}
+
+/* Décoration gauche */
+.ink-left2 {
+  position: absolute;
+  left: -80px;       
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: url("flowerbird1.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Décoration droite */
+.ink-right2 {
+  position: absolute;
+  right: -100px;      
+  top: 0;
+  width: 500px;
+  height: 100%;
+  background: url("flowerbird2.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Animation flottante */
+.ink-left2, .ink-right2 {
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* TITRE DU ROULEAU */
+.ink-title2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #120404;
+}
+
+
+/* =====================================================
+   LISTE DES ÉTAPES D’INSCRIPTION
+   HTML : .ink-item2
+===================================================== */
+.ink-item2 {
+  position: relative;
+  padding: 30px 0;
+}
+
+.ink-item2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 400px;
+  height: 20px;
+
+  background: url("ink-stroke.png") no-repeat center;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+/* Pas de ligne pour le premier élément */
+.ink-item2:first-child::before {
+  display: none;
+}
+
+/* Titre de chaque étape*/
+.ink-item2 h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+
+/* Effet hover */
+.ink-item2:hover {
+  transform: translateY(-7px);
+  transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   LIGNE DÉCORATIVE EN ARRIÈRE-PLAN
+===================================================== */
+.ink-section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1500px;
+  height: 300px;
+
+  background: url("ink-line.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* =====================================================
+   BOUTON DU FORMULAIRE
+===================================================== */
+.form-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: #c62828;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   FENÊTRE MODALE (POPUP)
+   HTML : #formModal
+===================================================== */
+
+/* Fond sombre */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Contenu du popup */
+.modal-content {
+    background: white;
+    width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Bouton fermer */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+
+/* =====================================================
+   STYLES DU FORMULAIRE
+===================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+/* Bouton envoyer */
+.send-btn {
+    background: #c62828;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+/* =====================================================
+   SECTION : Équipe pédagogique
+   HTML : section.team-section
+===================================================== */
+
+/* ===== Section globale ===== */
+.team-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fafafa;
+}
+
+/* ===== Header de la section ===== */
+.team-header {
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    gap: 40px;              
+}
+
+.team-text {
+    text-align: center;
+}
+
+/* ===== Images décoratives de chaque côté ===== */
+.side-img {
+    width: 100px;   
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+.left {
+    animation-delay: 0s;
+}
+
+.right {
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ===== Slider de l’équipe pédagogique ===== */
+.team-slider {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+/* Sous-titre de la section */
+.team-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+/* Piste de défilement des cartes */
+.team-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollLeft 25s linear infinite;
+}
+
+/* Animation de défilement du slider */
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== Cartes des enseignants ===== */
+.teacher-card {
+  width: 260px;
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.teacher-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.role {
+  color: #c0392b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 16px;
+  color: #555;
+  text-align: justify;
+}
+
+/* ===== Pause du slider au hover ===== */
+.team-track:hover {
+  animation-play-state: paused;
+}
+
+
+/* =====================================================
+   SECTION : Contact
+   HTML : Contactez-nous
+===================================================== */
+
+/* ===== Titre avec icône =====*/
+.title-with-icon {
+  display: flex;
+  align-items: center;  
+  gap: 8px;
+}
+
+.title-with-icon img {
+  width: 28px;         
+  height: auto;
+}
+
+.title-with-icon h2 {
+  margin: 0;            
+}
+
+/* ===== Carte et image décorative =====
+   HTML : div.map-wrapper
+   Contient la carte (iframe) et l'image décorative à côté */
+.map-wrapper {
+  display: flex;
+  align-items: flex-start;  
+  gap: 160px;                
+}
+
+.map-wrapper iframe {
+  width: 60%;
+  height: 350px;
+  border: none;
+}
+
+.map-wrapper img {
+  width: 30%;
+  height: auto;
+}
+
+/* ===== Image spécifique : Pavillon ===== */
+#pavilion-img {
+    width: 60%;
+    height: auto;
+}
+
+/* ===== Image spécifique : Bateau avec animation ===== */
+#boat-img {
+    position: relative; 
+    width: 20%;
+    height: auto;
+    margin-top: 50px;
+    animation: boat-sway 10s ease-in-out infinite;
+}
+
+@keyframes boat-sway {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(15px); }
+  50%  { transform: translateX(0); }
+  75%  { transform: translateX(-15px); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== Images décoratives flottantes à gauche et à droite =====
+   HTML : img.left-img / img.right-img */
+.right-img {
+  float: right;
+}
+.left-img {
+    float: left;
+}
+
