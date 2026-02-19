@@ -8,11 +8,7 @@ body{
     background-color: #fdf5e6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+
 
 
 /* ===============================
@@ -868,6 +864,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
