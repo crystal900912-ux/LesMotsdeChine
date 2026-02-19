@@ -262,8 +262,8 @@ h1{
 
 .target-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 60px;
   padding: 60px;
 }
 
@@ -868,6 +868,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
