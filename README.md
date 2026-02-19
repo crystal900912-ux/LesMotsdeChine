@@ -15,7 +15,7 @@ INSPE Paris - Année 2025-2026
 - CSS3
 
 ## Accès au site
-🌐 [Voir le site en ligne](votre-url-github-pages-ici)
+🌐 https://crystal900912-ux.github.io/LesMotsdeChine/
 
 ## Auteur
 Yadi LEI - Master 1 IFMN
