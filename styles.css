@@ -780,7 +780,7 @@ input, textarea, select {
   font-size: 16px;
   color: #555;
   text-align: justify;
-   hyphens: auto;
+  hyphens: auto;
 }
 
 /* ===== Pause du slider au hover ===== */
@@ -861,5 +861,6 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
