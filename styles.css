@@ -63,13 +63,19 @@ h1{
     background-color: #ffdab6;
 }
 
-/* Style de l'image du logo */
+/* Style des images du logo et du slogan */
+
+.brand{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #logo {
     width: 40%;
     height:auto;
 }
 
-/* Style de l'image du slogan */
 #slogan {
     width: 35%;
     height: auto;
@@ -869,6 +875,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
