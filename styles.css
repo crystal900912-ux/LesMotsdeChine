@@ -263,7 +263,7 @@ h1{
 .target-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 60px;
+  gap: 40px;
   padding: 60px;
 }
 
@@ -271,7 +271,7 @@ h1{
 /* Carte représentant un profil d’apprenant */
 .target-card {
   background: #ffffff;
-  padding: 30px 35px;
+  padding: 30px 25px;
   border-radius: 14px;
   text-align: center;
   cursor: pointer;
@@ -868,6 +868,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
