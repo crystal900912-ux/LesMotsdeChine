@@ -319,7 +319,7 @@ h1{
 #pavilioncard {
     width: 500px;
     height: auto;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 
@@ -334,7 +334,7 @@ h1{
 .ink-section {
   position: relative;
   display: flex;
-  justify-content: center; /* 卷轴居中 */
+  justify-content: center; 
   align-items: flex-start; 
   padding: 100px 0;
   text-align: center;
@@ -868,6 +868,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
