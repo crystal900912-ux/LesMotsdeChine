@@ -307,7 +307,7 @@ h1{
 }
 
 .target-card:hover h3 {
-  color: #b22222;   /* 可以换成你的品牌色 */
+  color: #b22222;   
 }
 
 .target-card:hover p {
@@ -317,7 +317,7 @@ h1{
 
 /* Illustration décorative du pavillon */
 #pavilioncard {
-    width: 400px;
+    width: 500px;
     height: auto;
     margin-top: 150px;
 }
@@ -868,6 +868,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
