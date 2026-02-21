@@ -352,7 +352,7 @@ h1{
 /* Décoration latérale gauche style encre */
 .ink-left {
   position: absolute;
-  left: -150px;       
+  left: -100px;       
   top: 0;
   width: 400px;
   height: 100%;
@@ -366,7 +366,7 @@ h1{
 /* Décoration latérale droite */
 .ink-right {
   position: absolute;
-  right: -150px;      
+  right: -100px;      
   top: 0;
   width: 500px;
   height: 100%;
@@ -868,6 +868,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
