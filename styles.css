@@ -1,7 +1,14 @@
 /* ===============================
    Styles généraux de la page
    =============================== */
+/* Permet d’inclure le padding et les bordures dans le calcul de la largeur.
+   Cela évite les dépassements involontaires et stabilise la mise en page. */
 * { box-sizing: border-box; }
+
+/* Empêche l’apparition d’un défilement horizontal.
+   Utile lorsque certains éléments décoratifs dépassent légèrement du viewport. */
+html, body { overflow-x: hidden; } 
+
 body{
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -162,12 +169,15 @@ h1{
    .items-wrapper {
   display: flex;
   justify-content: center;  
-  gap: 80px;                 
+  flex-wrap: wrap;
+  gap: 40px;                 
 }
 
 /* Carte contenant une icône et un texte */
 .item-with-icon {
   display: flex;
+  flex: 1;
+  max-width: 500px;
   flex-direction: column; 
   align-items: center;    
   text-align:center;   
@@ -176,6 +186,7 @@ h1{
 /* Icône illustrative */
 .intro-icon {
     width: 400px;
+    max-width: 100%;
     height:auto;
 }
 
@@ -325,8 +336,10 @@ h1{
 /* Illustration décorative du pavillon */
 #pavilioncard {
     width: 500px;
+    max-width: 100%;
     height: auto;
     margin-top: 50px;
+    justify-self: center;
 }
 
 
@@ -345,7 +358,10 @@ h1{
   align-items: flex-start; 
   padding: 100px 0;
   text-align: center;
-  overflow: visible;
+  overflow: hidden;
+}
+.ink-section::before{
+  width: min(1500px, 100vw);
 }
 
 /* Rouleau central contenant les contenus */
@@ -875,6 +891,7 @@ input, textarea, select {
 .left-img {
     float: left;
 }
+
 
 
 
